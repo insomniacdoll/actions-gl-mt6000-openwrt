@@ -19,7 +19,7 @@ on:
         required: false
         default: 'false'
   schedule:
-    - cron: 0 0 * * 6
+    - cron: 0 0 * * 4
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -38,7 +38,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-22.04
-
+    permissions:
+      contents: write
     steps:
     - name: Before freeing up disk space
       run: |
