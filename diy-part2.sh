@@ -13,6 +13,16 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_generate
 
+# Modify ustream-ssl
+echo 'start modify ustream-ssl Makefile'
+sed -i 's/e251189ed315f22ab63dc6f17b03178676e10c21fff0cdd863b294a3c51a1b5b/c48331dcfda73d16cb12a0aa069eb62a5c370428c7559011a7284a9ef67d3089/g' package/libs/ustream-ssl/Makefile
+echo 'modify ustream-ssl Makefile OK'
+
+# Modify naiveproxy
+# echo 'start modify naiveproxy Makefile'
+# sed -i 's/9bda77ac7c551e1fd33b2db21cc235e4d2e35c414655018f53e0d419ac2b46d1/e5eec05d7e799c4b6f93adb02129246142a88e427d76d6275a0312872031a1db/g' feeds/small/naiveproxy/Makefile
+# echo 'modify naiveproxy Makefile OK'
+
 # Modify v2ray-plugin
 # echo 'start modify v2ray-plugin Makefile'
 # sed -i 's/5.25.0/5.17.0/g' feeds/small/v2ray-plugin/Makefile
